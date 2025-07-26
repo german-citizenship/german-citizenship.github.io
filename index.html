@@ -252,7 +252,7 @@ text-align: center;
     <canvas id="applicationsChart"></canvas>
     <canvas id="totalRemainingChart"></canvas>
     <canvas id="totalMonthsChart"></canvas>
-    <button id="togglebutton" onclick="toggleData()">Toggle Data</button>
+   
 
 </div>
 
@@ -262,7 +262,8 @@ text-align: center;
         let showAllData = false;
 
         function filterData(showAll) {
-            return rawData.filter(entry => showAll || entry.data_type === "historical");
+            return rawData;
+		    //rawData.filter(entry => showAll || entry.data_type === "historical");
         }
 
         function updateCharts(showAll) {
